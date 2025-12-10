@@ -19,7 +19,7 @@
 namespace pka2xml {
 
     // ============================================================================
-    // INTERNAL: helper – ở kịch bản của bạn, parallel_for chạy 1 luồng cho nhanh
+    // INTERNAL: helper parallel_for chạy 1 luồng cho nhanh
     // ============================================================================
 
     namespace detail {
@@ -100,7 +100,7 @@ namespace pka2xml {
             &len,
             data,
             static_cast<uLong>(nbytes),
-            Z_BEST_SPEED // ưu tiên tốc độ, kích thước to hơn chút cũng không sao
+            Z_BEST_SPEED // ưu tiên tốc độ, kích thước to hơn chút
         );
 
         if (res != Z_OK) {
@@ -428,7 +428,6 @@ namespace pka2xml {
 
     // ============================================================================
     // BATCH PROCESSING - Xử lý nhiều file song song (nếu dùng trong lib C++)
-    // Lưu ý: Docker CLI hiện tại của bạn không dùng mấy hàm này.
     // ============================================================================
 
     /// \brief Xử lý batch nhiều file PKA song song
